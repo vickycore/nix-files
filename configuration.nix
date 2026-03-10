@@ -10,11 +10,14 @@
       ./hardware-configuration.nix
     ];
 
+  # Enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "chungus"; # Define your hostname.
+  networking.hostName = "chohept"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -133,8 +136,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     wget
+    git
     displaylink # multiple monitor support
     wineWowPackages.stable # both 32 and 64-bit
     vscodium # code editor (evil)
@@ -143,11 +147,12 @@
     unzip
     bun
     hyfetch
-    git
     discord
     obsidian
-    tmux
+    tmux 
  ];
+
+  environment.variables.EDITOR = "vim";
 
   environment.variables = {
     KWIN_DRM_PREFER_COLOR_DEPTH = "24";
