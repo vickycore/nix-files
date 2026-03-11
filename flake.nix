@@ -13,7 +13,7 @@
   outputs = { self, nixpkgs, home-manager,  ... } @ inputs: {
     nixosConfigurations = {
       chohept = nixpkgs.lib.nixosSystem {
-        speicalArgs = {inherit inputs;};
+        specialArgs = {inherit inputs;};
         modules = [ ./nixos-config/configuration.nix ];
       };
     };
