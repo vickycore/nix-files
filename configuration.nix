@@ -63,6 +63,7 @@
 
 
   # Add support for second monitor
+  # TODO: change this this sucks
   services.xserver.displayManager.sessionCommands = ''
       ${lib.getBin pkgs.xorg.xrandr}/bin/xrandr --setprovideroutputsource 2 0
   '';
@@ -139,17 +140,7 @@
     vim
     wget
     git
-    displaylink # multiple monitor support
-    wineWowPackages.stable # both 32 and 64-bit
-    vscodium # code editor (evil)
-    ffmpeg-full
-    playerctl # command line media stream control
-    unzip
-    bun
-    hyfetch
-    discord
-    obsidian
-    tmux 
+    displaylink # multiple monitor support 
  ];
 
   environment.variables.EDITOR = "vim";
