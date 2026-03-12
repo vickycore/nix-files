@@ -9,11 +9,6 @@
     };
   };
 
-  home = {
-    username = "vicky";
-    homeDirectory = "/home/vicky";
-  };
-
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     hyfetch
@@ -33,18 +28,6 @@
     obsidian
     discord
   ];
-
-  programs.home-manager.enable = true;
-
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Vicky Bala";
-        email = "vikrambala.va@gmail.com";
-      };
-    };
-  };
   
   programs.bash = {
     enable = true;
@@ -57,9 +40,6 @@
     };
   };
 
-  # Automatically reload systemd services
+  # Automatically reload systemd services TODO: Where do I put this
   systemd.user.startServices = "sd-switch";
-
-  # Read the wiki I have no clue what this does
-  home.stateVersion = "25.11";
 }
