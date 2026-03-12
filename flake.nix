@@ -2,6 +2,7 @@
   description = "Base NixOS flake";
 
   inputs = {
+    # TODO: add unstable URL
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     
     home-manager = {
@@ -15,20 +16,29 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager,  ... } @ inputs: {
+  outputs = inputs @ { self, nixpkgs, home-manager,  ... }: {
     nixosConfigurations = {
-      chohept = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [ ./nixos-config/configuration.nix ];
-      };
-    };
+      chohept = let
+        username = "vicky";
+        specialArgs = {inherit username;};
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          system = "x86_64-linux";
 
-    homeConfigurations = {
-      "vicky@cohhept" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs;};
-        modules = [ ./home/home.nix ];
-      };
+          modules = [
+            ./hosts/thinkpad
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = inputs // specialArgs;
+
+              #TODO: Why have a separate users/ and home/ folder?? Missing configs
+            }
+          ];
+        };
     };
   };
 }
