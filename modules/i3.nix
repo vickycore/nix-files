@@ -25,7 +25,6 @@
         i3lock # default i3 screen locker
         xautolock # lock screen after some time
         i3status # provide information to i3bar
-        i3-gaps # i3 with gaps
         picom # transparency and shadows
         feh # set wallpaper
         acpi # battery information
