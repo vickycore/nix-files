@@ -7,7 +7,7 @@
   # 直接从当前文件夹中读取配置文件作为配置内容
 
   # wallpaper, binary file  TODO: pretty mid this should be configured by-user?
-  home.file.".config/i3/wallpaper.jpg".source = ../../wallpapers/wallpaper.jpg;
+  home.file.".config/i3/wallpaper.jpg".source = ../../wallpapers/yotsubato.jpg;
   home.file.".config/i3/config".source = ./config;
   home.file.".config/i3/i3blocks.conf".source = ./i3blocks.conf;
   home.file.".config/i3/keybindings".source = ./keybindings;
@@ -22,7 +22,7 @@
   # set cursor size and dpi
   xresources.properties = {
     "Xcursor.size" = 16;
-    "Xft.dpi" = 192;
+    "Xft.dpi" = 96;
   };
 
   # 直接以 text 的方式，在 nix 配置文件中硬编码文件内容
