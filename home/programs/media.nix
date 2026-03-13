@@ -10,11 +10,14 @@
 
   home.packages = with pkgs; [
     # audio control
-    pavucontrol
+    #pavucontrol
     playerctl
     pulsemixer
+    
     # images
     imv
+
+    ffmpeg-full
   ];
 
   programs = {
@@ -24,7 +27,7 @@
       scripts = [pkgs.mpvScripts.mpris];
     };
 
-    obs-studio.enable = true;
+    #obs-studio.enable = true;
   };
 
   services = {
