@@ -1,6 +1,5 @@
-# TODO: Add OpenSSH support and networking firewall, fonts??
-# TODO: Where is username taken from?
-# TODO: Where is networkmanager enabled?
+# TODO: Add OpenSSH support, networking firewall, fonts??
+# TODO: missing dbus, geoclue2, udev?
 
 { pkgs, lib, username, ... }:
 
@@ -25,7 +24,14 @@
       trusted-users = [ username ];
     };
 
-    channel.enable = false;
+    # channel.enable = false;
+  };
+
+  # Weekly garbage collection
+  nix.gc = {
+    automatic = lib.mkDefault true;
+    dates = lib.mkDefault "weekly";
+    options = lib.mkDefault "--delete-older-than 7d";
   };
 
   # Set your time zone.
@@ -57,7 +63,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    #jack.enable = true;
+    jack.enable = true;
   };
 
   # Packages for system profile
@@ -66,6 +72,7 @@
     wget
     git
     curl
+    xfce.thunar  # TODO: shouldn't this be home-manager level?
   ];
 
 }

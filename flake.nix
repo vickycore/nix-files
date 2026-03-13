@@ -17,6 +17,7 @@
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager,  ... }: {
+    # TODO: This setup bakes one user per host which is ass
     nixosConfigurations = {
       chohept = let
         username = "vicky";
@@ -28,14 +29,13 @@
 
           modules = [
             ./hosts/thinkpad
-
+            
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = inputs // specialArgs;
-
-              #TODO: Why have a separate users/ and home/ folder?? Missing configs
+              home-manager.users.${username} = import ./users/${username}.nix;
             }
           ];
         };
