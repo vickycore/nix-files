@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "catppuccin-bat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1751237777,
+        "narHash": "sha256-lJapSgRVENTrbmpVyn+UQabC9fpV1G1e+CdlJ090uvg=",
+        "owner": "catppuccin",
+        "repo": "bat",
+        "rev": "6810349b28055dce54076712fc05fc68da4b8ec0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "bat",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -39,8 +55,47 @@
     },
     "root": {
       "inputs": {
+        "catppuccin-bat": "catppuccin-bat",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "spicetify-nix": "spicetify-nix"
+      }
+    },
+    "spicetify-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "spicetify-themes": "spicetify-themes"
+      },
+      "locked": {
+        "lastModified": 1631918376,
+        "narHash": "sha256-WOekCAOOlSERRLg1HA7eRh9Qd9DZM75Zkqw4Kp4R0xY=",
+        "owner": "jakeisnt",
+        "repo": "spicetify-nix",
+        "rev": "08e05534909a09921da34b60ebd6a4774baec1f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jakeisnt",
+        "repo": "spicetify-nix",
+        "type": "github"
+      }
+    },
+    "spicetify-themes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1631857770,
+        "narHash": "sha256-EGXLhHuWHvGYWHXvm95gSvg3LIUth764LK3Q5ImuYWQ=",
+        "owner": "morpheusthewhite",
+        "repo": "spicetify-themes",
+        "rev": "ad3049d1c6bfa90268d09c201f61e5d57561949c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "morpheusthewhite",
+        "repo": "spicetify-themes",
+        "type": "github"
       }
     }
   },
