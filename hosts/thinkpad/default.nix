@@ -19,6 +19,7 @@
   # Hostname & networking
   networking.hostName = "chohept";
   networking.networkmanager.enable = true;
+  networking.wireless.enable = true;
 
   # NixOS release version used for stateful data (IDK)
   system.stateVersion = "25.11";
