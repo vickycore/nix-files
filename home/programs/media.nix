@@ -10,13 +10,14 @@
 
   home.packages = with pkgs; [
     # audio control
-    #pavucontrol
+    pavucontrol
     playerctl
     pulsemixer
     
     # images
     imv
 
+    # greatest library of all time
     ffmpeg-full
   ];
 

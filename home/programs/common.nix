@@ -13,7 +13,9 @@
 
     # utils
     ripgrep
-    
+    file
+    exiftool    
+
     # misc
     wineWowPackages.wayland
     obsidian
