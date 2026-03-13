@@ -2,12 +2,12 @@
 
 {
   imports = [
-    ../../home/base.nix
-    ../../home/fcitx5
-    ../../home/i3
-    ../../home/programs
-    ../../home/rofi
-    ../../home/shell
+    ../home/base.nix
+    ../home/fcitx5
+    ../home/i3
+    ../home/programs
+    ../home/rofi
+    ../home/shell
   ];
 
   programs.git = {
