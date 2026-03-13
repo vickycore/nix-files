@@ -8,8 +8,6 @@
     ../home/rofi
     ../home/shell
   ];
-  
-  users.users.vicky.shell = "zsh"; # TODO: this feels illegal
 
   programs.git = {
     settings = {

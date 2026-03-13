@@ -9,7 +9,8 @@
     deadnix
     statix
   ];
-  # TODO: This shouldn't be in common lmao
+  
+# TODO: why is bash default :(
   programs.zsh = {
     enable = true;
     enableCompletion = true;
