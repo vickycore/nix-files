@@ -34,13 +34,13 @@
 
           modules = [
             ./hosts/thinkpad
-            
+            ./users/${username}/nixos.nix  # system-level packages for the user
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = inputs // specialArgs;
-              home-manager.users.${username} = import ./users/${username}.nix;
+              home-manager.users.${username} = import ./users/${username}/home.nix; # user-level packages for the user
             }
           ];
         };

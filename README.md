@@ -16,3 +16,12 @@ home/  # Home Manager packages (organized by function)
 
 users/ # user config (e.g. configuring Git)
 ```
+
+## Home Lab setup
+Some use cases I'm interested in:
+- Dropping subscriptions / self-hosting
+  - Hosting my own music (Navidrome) or media (Jellyfin / Plexamp)
+  - Having my own cloud storage for photos & files (Nextcloud)
+  - Password manager (Vaultwarden)
+- Data hoarding
+  - Storing books/articles/manga
