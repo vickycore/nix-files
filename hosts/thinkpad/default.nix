@@ -10,8 +10,8 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      # Include external hard drive
-      ./hdd.nix
+      # Include external hard drive (Seagate 2TB USB)
+      ./seagate.nix
     ];
 
   # TODO: Add GRUB
