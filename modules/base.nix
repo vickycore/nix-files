@@ -46,9 +46,6 @@
     LC_TIME = "en_US.UTF-8";
   };
   
-  # TODO: ?
-  # networking.firewall.enable = false;
-
   # Enable OpenSSH
   services.openssh = {
     enable = true;

@@ -15,6 +15,9 @@
     ripgrep
     file
     exiftool    
+    
+    # cloud
+    docker-compose
 
     # misc
     wineWowPackages.wayland
