@@ -19,6 +19,9 @@
 
     # greatest library of all time
     ffmpeg-full
+
+    # youtube
+    yt-dlp
   ];
 
   programs = {
