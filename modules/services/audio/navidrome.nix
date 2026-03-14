@@ -5,7 +5,7 @@
     enable = true;
 
     settings = {
-      MusicFolder = "/mnt/storage/music"
-    };
+      MusicFolder = "/mnt/storage/music";
+    }
   };
 }
