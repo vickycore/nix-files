@@ -9,6 +9,9 @@
 
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
+      # Include external hard drive
+      ./hdd.nix
     ];
 
   # TODO: Add GRUB

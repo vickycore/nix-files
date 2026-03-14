@@ -4,10 +4,8 @@
   services.navidrome = {
     enable = true;
 
-    # settings.EnableInsightsCollection
-
-    #settings = {
-    #  MusicFolder = "/mnt/music"
-    #}
+    settings = {
+      MusicFolder = "/mnt/storage/music"
+    }
   };
 }
