@@ -4,8 +4,8 @@
   # Import NixOS modules
   imports =
     [ 
-      ../../modules/i3.nix
       ../../modules/base.nix
+      ../../modules/display/i3.nix
 
       # Include the results of the hardware scan.
       ./hardware-configuration.nix

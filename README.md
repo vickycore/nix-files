@@ -10,18 +10,18 @@ hosts/  # physical machines, server config
   thinkpad/  # my trusty T480
   nas/ # Home Lab (coming soon)
 
-modules/ System packages (organized by function)
+modules/  # system packages (organized by function)
 
 home/  # Home Manager packages (organized by function)
 
-users/ # user config (e.g. configuring Git)
+users/  # user config (e.g. configuring Git)
 ```
 
 ## Home Lab setup
 Some use cases I'm interested in:
-- Dropping subscriptions / self-hosting
-  - Hosting my own music (Navidrome) or media (Jellyfin / Plexamp)
+- Dropping subscriptions/self-hosting
+  - Hosting my own music (Navidrome) or media (Jellyfin/Plexamp)
   - Having my own cloud storage for photos & files (Nextcloud)
   - Password manager (Vaultwarden)
-- Data hoarding
+- Digital archival/hoarding
   - Storing books/articles/manga
