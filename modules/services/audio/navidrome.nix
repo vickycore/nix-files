@@ -6,6 +6,6 @@
 
     settings = {
       MusicFolder = "/mnt/storage/music"
-    }
+    };
   };
 }
