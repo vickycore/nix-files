@@ -25,3 +25,6 @@ Some use cases I'm interested in:
   - Password manager (Vaultwarden)
 - Digital archival/hoarding
   - Storing books/articles/manga
+  - Web page storage
+
+TODO: Security

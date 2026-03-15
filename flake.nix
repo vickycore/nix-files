@@ -4,7 +4,8 @@
   inputs = {
     # TODO: add unstable URL
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-    
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11"; 
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,12 +22,25 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager,  ... }: {
-    # TODO: This setup bakes one user per host which is ass
+  outputs = inputs @ { self, nixpkgs, nixpkgs-unstable,  home-manager,  ... }: let
+    # Supported systems
+    systems = [ 
+      "x86_64-linux"
+    ];
+    
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+  in  {
+    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    
+    # Custom packages and mods. Makes unstable packages
+    overlays = import ./overlays {inherit inputs;};
+
+    # TODO: This setup bakes one user per host
     nixosConfigurations = {
       chohept = let
         username = "vicky";
-        specialArgs = {inherit username;};
+        specialArgs = {inherit username;};  # Can pass username to all modules
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
