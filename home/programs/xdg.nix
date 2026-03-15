@@ -1,5 +1,5 @@
 {config, ...}: let
-  browser = ["firefox.desktop"];
+  browser = ["helium.desktop"];
 
   # XDG MIME types
   associations = {
