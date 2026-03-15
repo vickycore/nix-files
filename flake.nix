@@ -20,22 +20,14 @@
       url = "github:jakeisnt/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    helium = {
+      url = "github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, nixpkgs-unstable,  home-manager,  ... }: let
-    # Supported systems
-    systems = [ 
-      "x86_64-linux"
-    ];
-    
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-  in  {
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
-    
-    # Custom packages and mods. Makes unstable packages
-    overlays = import ./overlays {inherit inputs;};
-
+  outputs = inputs @ { self, nixpkgs, nixpkgs-unstable,  home-manager,  ... }:
     # TODO: This setup bakes one user per host
     nixosConfigurations = {
       chohept = let

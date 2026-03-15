@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  helium,
   username,
   ...
 }: {
@@ -10,4 +11,6 @@
       profiles.${username} = {};
     };
   };
+
+  home.packages = [ helium.packages.${pkgs.system}.default ];
 }
