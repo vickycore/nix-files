@@ -27,7 +27,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, nixpkgs-unstable,  home-manager,  ... }:
+  outputs = inputs @ { self, nixpkgs, nixpkgs-unstable,  home-manager,  ... }: {
     # TODO: This setup bakes one user per host
     nixosConfigurations = {
       chohept = let
@@ -50,7 +50,6 @@
             }
           ];
         };
-      };
     };
   };
 }
