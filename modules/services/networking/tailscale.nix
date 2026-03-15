@@ -16,8 +16,8 @@
     trustedInterfaces = [ "tailscale0" ];
     allowedUDPPorts = [ config.services.tailscale.port ];
 
-    # Only expose music (Navidrome port)
-    interfaces.tailscale0.allowedUDPPorts = [ 4533 ];
+    # Only expose music (Navidrome's TCP port)
+    interfaces.tailscale0.allowedTCPPorts = [ 4533 ];
   };
 
   # Use nftables instead of iptables
