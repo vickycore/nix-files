@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, musicDir, ... }:
 
 {
   services.navidrome = {
@@ -7,7 +7,7 @@
     settings = {
       Address = "0.0.0.0"; 
       Port = 4533;  # default port
-      MusicFolder = "/mnt/storage/music";
+      MusicFolder = "${musicDir}";
     };
   };
 }

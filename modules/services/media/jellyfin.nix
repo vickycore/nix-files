@@ -1,4 +1,4 @@
-{ config, pkgs, username,  ... }:
+{ config, pkgs, username, jellyfinRootDir, ... }:
 
 {
   services.jellyfin = {
@@ -6,10 +6,8 @@
     openFirewall = true;
     # Default ports: 8096, 8920 (https://jellyfin.org/docs/general/post-install/networking/#port-bindings)
     user = "${username}";  # external drive access
-
-    # TODO: should be moved to hosts?
-    dataDir = "/mnt/storage/jellyfin/data/";
-    cacheDir = "/mnt/storage/jellyfin/cache/";
+    dataDir = "${jellyfinRootDir}/data/";
+    cacheDir = "${jellyfinRootDir}/cache/";
   };
 
   environment.systemPackages = [

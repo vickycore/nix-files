@@ -2,7 +2,6 @@
   description = "Base NixOS flake";
 
   inputs = {
-    # TODO: add unstable URL
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -31,8 +30,11 @@
     # TODO: This setup bakes one user per host
     nixosConfigurations = {
       chohept = let
-        username = "vicky";
-        specialArgs = {inherit username;};  # Can pass username to all modules
+        specialArgs = {
+          username = "vicky";
+          musicDir = "/mnt/storage/music";
+          jellyfinRootDir = "/mnt/storage/jellyfin";
+        };
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;

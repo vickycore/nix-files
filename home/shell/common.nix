@@ -10,7 +10,6 @@
     statix
   ];
   
-# TODO: why is bash default :(
   programs.zsh = {
     enable = true;
     enableCompletion = true;
