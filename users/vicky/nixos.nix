@@ -1,7 +1,8 @@
 {
   imports = [
     # Add system-level modules here
-    ../../modules/services/audio/navidrome.nix
+    ../../modules/services/media/navidrome.nix
+    ../../modules/services/media/jellyfin.nix
     ../../modules/services/networking/tailscale.nix
   ];
 
