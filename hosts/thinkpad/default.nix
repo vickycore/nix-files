@@ -10,7 +10,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      # Include external hard drive (Seagate 2TB USB)
+      # Include external hard drive (Seagate 1TB USB)
       ./seagate.nix
     ];
 

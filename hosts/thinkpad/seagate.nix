@@ -5,7 +5,7 @@
   #  ENV{ID_FS_UUID}=="DAAE13C9010C6E56", ENV{UDISKS_IGNORE}="1"
   #'';
 
-  # Mounts my USB 2TB HDD to /mnt/storage
+  # Mounts my USB 1TB HDD to /mnt/storage
   # nofail -> boot succeeds even if HDD isn't plugged in
   fileSystems."/mnt/storage" = {
     device = "/dev/disk/by-uuid/DAAE13C9010C6E56";
