@@ -1,6 +1,7 @@
 { ... }:
 
 {
+  # TODO: Add sops-nix support for domain config
   services.vaultwarden = {
     enable = true;
     config = {
