@@ -20,7 +20,7 @@ users/  # user config (e.g. configuring Git)
 ## Home Lab setup
 Some use cases I'm interested in:
 - Dropping subscriptions/self-hosting
-  - Hosting my own music (Navidrome, slskd) or media (Jellyfin/Plexamp)
+  - [x] Hosting my own music (Navidrome, slskd) or media (Jellyfin/Plexamp)
   - Having my own cloud storage for photos & files (Nextcloud)
   - Password manager (Vaultwarden)
 - Digital archival/hoarding
