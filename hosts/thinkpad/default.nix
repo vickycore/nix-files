@@ -14,6 +14,8 @@
       ./seagate.nix
     ];
 
+  # TODO: Could be useful to define default media storage locations?
+
   # TODO: Add GRUB
   # Bootloader
   boot.loader.systemd-boot.enable = true;
