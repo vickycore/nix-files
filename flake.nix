@@ -33,9 +33,10 @@
         username = "vicky";
         musicDir = "/mnt/storage/music";
         jellyfinRootDir = "/mnt/storage/jellyfin";
+        slskdDomain = "http://chohept.tailb8091b.ts.net"; # serving via Tailscale
 
         specialArgs = {
-          inherit username musicDir jellyfinRootDir;
+          inherit username musicDir jellyfinRootDir slskdDomain;
         };        
       in
         nixpkgs.lib.nixosSystem {
