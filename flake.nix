@@ -32,12 +32,13 @@
       chohept = let
         username = "vicky";
         musicDir = "/mnt/storage/music";
-        jellyfinRootDir = "/mnt/storage/jellyfin";        
+        jellyfinRootDir = "/mnt/storage/jellyfin";
+
+        specialArgs = {
+          inherit username musicDir jellyfinRootDir;
+        };        
       in
         nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit username musicDir jellyfinRootDir;
-          };          
           system = "x86_64-linux";
 
           modules = [
