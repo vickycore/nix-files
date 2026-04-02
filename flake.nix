@@ -40,10 +40,11 @@
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
-          system = "x86_64-linux";
 
           modules = [
             ./hosts/thinkpad
+            { nixpkgs.hostPlatform = "x86_64-linux"; }            
+
             ./users/${username}/nixos.nix  # system-level packages for the user
             home-manager.nixosModules.home-manager
             {
