@@ -30,14 +30,14 @@
     # TODO: This setup bakes one user per host
     nixosConfigurations = {
       chohept = let
-        specialArgs = {
-          username = "vicky";
-          musicDir = "/mnt/storage/music";
-          jellyfinRootDir = "/mnt/storage/jellyfin";
-        };
+        username = "vicky";
+        musicDir = "/mnt/storage/music";
+        jellyfinRootDir = "/mnt/storage/jellyfin";        
       in
         nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
+          specialArgs = {
+            inherit username musicDir jellyfinRootDir;
+          };          
           system = "x86_64-linux";
 
           modules = [
