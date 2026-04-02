@@ -39,7 +39,7 @@
         };        
       in
         nixpkgs.lib.nixosSystem {
-          inherit username;
+          inherit specialArgs;
           system = "x86_64-linux";
 
           modules = [
