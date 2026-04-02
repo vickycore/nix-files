@@ -21,6 +21,7 @@
       4533  # navidrome
       8096  # jellyfin (HTTP)
       8920  # jellyfin (HTTPS)
+      8000  # vaultwarden
     ];
   };
 

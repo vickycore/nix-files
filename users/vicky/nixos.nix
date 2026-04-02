@@ -1,9 +1,9 @@
 {
   imports = [
     # Add system-level modules here
-    ../../modules/services/media/navidrome.nix
-    ../../modules/services/media/jellyfin.nix
-    ../../modules/services/networking/tailscale.nix
+    ../../modules/media/navidrome.nix
+    ../../modules/media/jellyfin.nix
+    ../../modules/networking/tailscale.nix
   ];
 
   # SSH public key
