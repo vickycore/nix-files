@@ -20,6 +20,9 @@
     # greatest library of all time
     ffmpeg-full
 
+    # video acceleration (VAAPI)
+    libva
+
     # youtube
     yt-dlp
   ];
