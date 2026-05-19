@@ -25,4 +25,7 @@
 
   # NixOS release version used for stateful data (IDK)
   system.stateVersion = "25.11";
+
+  # Enable Bolt daemon (thunderbolt port for dock)
+  services.hardware.bolt.enable = true;
 }
