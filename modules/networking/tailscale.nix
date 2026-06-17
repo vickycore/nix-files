@@ -17,7 +17,8 @@
     allowedUDPPorts = [ config.services.tailscale.port ];
 
     # Only expose certain ports
-    interfaces.tailscale0.allowedTCPPorts = [ 
+    interfaces.tailscale0.allowedTCPPorts = [
+      2283  # immich 
       4533  # navidrome
       8096  # jellyfin (HTTP)
       8920  # jellyfin (HTTPS)
