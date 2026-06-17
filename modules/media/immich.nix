@@ -7,6 +7,6 @@
     host = "0.0.0.0";
     openFirewall = true;
 
-    services.immich.machine-learning.enable = lib.mkDefault true;
+    machine-learning.enable = lib.mkDefault true;
   };
 }
