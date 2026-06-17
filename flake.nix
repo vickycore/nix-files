@@ -37,7 +37,7 @@
         imgDir = "/mnt/storage/images";
 
         specialArgs = {
-          inherit username musicDir jellyfinRootDir slskdDomain;
+          inherit username musicDir jellyfinRootDir imgDir slskdDomain;
         };        
       in
         nixpkgs.lib.nixosSystem {
