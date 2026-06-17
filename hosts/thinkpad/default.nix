@@ -28,4 +28,7 @@
 
   # Enable Bolt daemon (thunderbolt port for dock)
   services.hardware.bolt.enable = true;
+
+  # Host-specific config
+  services.immich.machine-learning.enable = false;
 }

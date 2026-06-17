@@ -34,6 +34,7 @@
         musicDir = "/mnt/storage/music";
         jellyfinRootDir = "/mnt/storage/jellyfin";
         slskdDomain = "http://chohept.tailb8091b.ts.net"; # serving via Tailscale
+        imgDir = "/mnt/storage/images";
 
         specialArgs = {
           inherit username musicDir jellyfinRootDir slskdDomain;
