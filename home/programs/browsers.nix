@@ -12,5 +12,5 @@
     };
   };
 
-  home.packages = [ helium.packages.${pkgs.system}.default ];
+  home.packages = [ helium.packages.${pkgs.stdenv.hostPlatform.system}.default ];
 }
